@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RESTful API</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="header">
+        <input id="message" @keydown.enter="addPost" v-model="message">
+        <button @click="addPost">+</button>
+      </div>
+      <div id="content" class="content">
+        <div class="post" v-for="(item, i) in posts" :key="item.id"
+          @click="doUpdate(i)"
+        >
+          <div class="text">{{ item.data }}</div>
+          <span class="delete" @click.stop="deletePost(i)"></span>
+          <input
+            @keydown.enter="updatePost"
+            @keydown.escape="cancelEdit(i)" 
+            v-model="item.data"
+            v-if="editingItemIndex === i"
+            :ref="'input_' + i"
+            spellcheck="false"
+          >
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/axios.min.js"></script>
+    <script src="/app.js"></script>
+    <script src="/index.js"></script>
+  </body>
+</html>

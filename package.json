@@ -1,0 +1,24 @@
+{
+  "name": "restful-api-example",
+  "version": "0.1.0",
+  "description": "🔗 RESTful API | Getting Started",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leegeunhyeok/restful-api-example.git"
+  },
+  "author": "leegeunhyeok",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leegeunhyeok/restful-api-example/issues"
+  },
+  "homepage": "https://github.com/leegeunhyeok/restful-api-example#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "colors": "^1.4.0",
+    "express": "^4.17.1"
+  }
+}

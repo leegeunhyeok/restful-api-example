@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "-apple-system", "BlinkMacSystemFont","Apple SD Gothic Neo",
+               "Inter", "Spoqa Han Sans", "Segoe UI", Sans-Serif,
+               "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#app {
+  max-width: 700px;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+input {
+  outline: none;
+  padding: .4rem .8rem;
+  border: 1px solid #000;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  padding: .4rem .8rem;
+  border: 1px solid #000;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: .3s;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.header input {
+  flex-grow: 5;
+  margin-right: .5rem;
+}
+
+.header button {
+  flex-grow: 1;
+}
+
+.content {
+  width: 100%;
+}
+
+.content .post {
+  position: relative;
+  border: 1px solid #000;
+  padding: .4rem .8rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content .post:hover .text {
+  color: #888;
+}
+
+
+.content .post .text {
+  width: calc(100% - 30px);
+}
+
+.content .post .delete {
+  cursor: pointer;
+  position: absolute;
+  top: .4rem;
+  right: .8rem;
+  width: 30px;
+  text-align: center;
+  color: tomato;
+}
+
+.content .post .delete::before {
+  content: 'x';
+}
+
+.content .post .delete:hover {
+  color: #777;
+}
+
+.content .post input {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border: none;
+  color: teal;
+}
